@@ -1,0 +1,21 @@
+{
+  "name": "json-form",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "ts-node main.ts",
+    "prewatch": "npm install",
+    "watch": "nodemon --ext .ts --exec 'npm run start'"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@node-scarlet/http": "^0.10.1",
+    "@types/node": "^12.7.1",
+    "ts-node": "^8.3.0",
+    "typescript": "^3.5.3"
+  },
+  "devDependencies": {},
+  "description": ""
+}

@@ -1,0 +1,58 @@
+[
+  {
+    "id": "1",
+    "name": "Light Sienna Eucalyptus Wreath",
+    "price": 59000,
+    "description": "Reflect the warm vibrant colors of your soft emotional interior",
+    "photoUrl": "https://cdn.shopify.com/s/files/1/0207/8508/products/faux_light_sienna_eucalytpus_wreath-G171461M_1020x1020.jpg?v=1564595360"
+  },
+  {
+    "id": "2",
+    "name": "Sienna Eucalyptus Spray",
+    "price": 1000,
+    "description": "Reflect the warm vibrant colors of your soft emotional interior",
+    "photoUrl": "https://cdn.shopify.com/s/files/1/0207/8508/products/faux_sienna_eucalyptus_stem_spray-G171221_1020x1020.jpg?v=1564600709"
+  },
+  {
+    "id": "3",
+    "name": "Zoe Bud Vase",
+    "price": 5000,
+    "description": "So pretty",
+    "photoUrl": "https://cdn.shopify.com/s/files/1/0207/8508/products/zoe_bud_vase-90992053B4_4_1020x1020.jpg?v=1565216759"
+  },
+  {
+    "id": "4",
+    "name": "Aged Terracotta Jug",
+    "price": 3600,
+    "description": "Give your space a triassic period feel with our Aged Terracotta Jug",
+    "photoUrl": "https://cdn.shopify.com/s/files/1/0207/8508/products/aged_terracotta_jug-15292A-1_1020x1020.jpg?v=1564776941"
+  },
+  {
+    "id": "5",
+    "name": "#Shiplap Shirt",
+    "price": 2600,
+    "description": "A nice shirt for nice people",
+    "photoUrl": "https://cdn.shopify.com/s/files/1/0207/8508/products/shiplap-logo-shirt_3_1020x1020.jpg?v=1550002402"
+  },
+  {
+    "id": "6",
+    "name": "Zia Earrings",
+    "price": 75600,
+    "description": "Joanna's favorite",
+    "photoUrl": "https://cdn.shopify.com/s/files/1/0207/8508/products/leather-leaf-earrings-zia_1_1020x1020.jpg?v=1565366310"
+  },
+  {
+    "id": "7",
+    "name": "Carina Mango Wood Vase",
+    "price": 4600,
+    "description": "You can put things inside of it",
+    "photoUrl": "https://cdn.shopify.com/s/files/1/0207/8508/products/round-mango-wood-vase-luca-VSELUC-NAT1_1_1020x1020.jpg?v=1550781722"
+  },
+  {
+    "id": "8",
+    "name": "Ashton Fringe Pouf",
+    "price": 21200,
+    "description": "You'll be the envy of all of your friends",
+    "photoUrl": "https://cdn.shopify.com/s/files/1/0207/8508/products/ivory-and-black-bohemian-style-pouf-ashton-fringe_1020x1020.jpg?v=1556721475"
+  }
+]
