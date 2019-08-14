@@ -1,0 +1,89 @@
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <style>
+    * {
+      font-family: 'Roboto', sans-serif;
+      color: #777;
+      font-size: 14px;
+    }
+    form {
+      width: 40em;
+    }
+    form * {
+      display: block;
+      margin-bottom: 1em;
+    }
+    textarea {
+      font-family: 'Roboto Mono', monospace;
+      white-space: nowrap;
+      height: 80vh;
+      width: 100%;
+    }
+    button {
+      padding: .5rem 1rem;
+      width: 6rem;
+      color: #777;
+      border: .04rem solid #aaa;
+      border-radius: .4rem;
+    }
+    #key-errors:not(:empty),
+    #json-errors:not(:empty) {
+      padding: 1rem;
+      color: salmon;
+      background-color: lavenderblush;
+      border-radius: .4rem;
+    }
+  </style>
+
+  <form onsubmit="handleSubmit(event)" method="POST">
+    <input name="key" id="key" placeholder="key"/>
+    <p id="key-errors"></p>
+    <textarea name="json" id="json"></textarea>
+    <p id="json-errors"></p>
+    <button>SAVE</button>
+  </form>
+
+  <script>
+    const keyField = document.querySelector('#key');
+    const keyErrors = document.querySelector('#key-errors');
+    const jsonField = document.querySelector('#json');
+    const jsonErrors = document.querySelector('#json-errors');
+    
+    async function fetchSettings() {
+      const response = await fetch('/settings.json');
+      jsonField.value = await response.text();
+    }
+    
+    fetchSettings();
+    
+    keyField.addEventListener('keyup', validateKey);
+    jsonField.addEventListener('keyup', validateJson);
+
+    function validateKey() {
+      if (keyField.value != '') {
+        keyErrors.innerText = '';
+        return true;
+      } else {
+        keyErrors.innerText = 'Key must be provided';
+        return false;
+      }
+    }
+    function validateJson() {
+      try {
+        JSON.parse(jsonField.value);
+        jsonErrors.innerText = '';
+        return true;
+      } catch (error) {
+        jsonErrors.innerText = error.message;
+        return false;
+      }
+    }
+    function handleSubmit(event) {
+      if (validateKey() && validateJson()) return;
+      event.preventDefault();
+    }
+  </script>
+</body>
