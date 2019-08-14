@@ -11,7 +11,7 @@ const settingsForm = './index.html';
 
 
 // Handle form submissions seeking to edit settings.json
-async function saveSettings(req?) {
+async function saveSettingsHandler(req?) {
   const { key, json } = req.body;
   if (!json || !key)
   return 400; // Bad Request
@@ -19,13 +19,13 @@ async function saveSettings(req?) {
   if (key != await read(keyFile, 'utf8'))
   return 401; // Unauthorized
 
-  await write(settingsFile, json)
+  write(settingsFile, json);
   return read(settingsForm, 'utf8');
 }
 
 const s = http.server();
 s.route('GET', '/settings.json', () => read(settingsFile, 'utf8'));
 s.route('GET', '/*', () => read(settingsForm, 'utf8'));
-s.route('POST', '/*', saveSettings);
+s.route('POST', '/*', saveSettingsHandler);
 s.listen(5000);
 console.log('listening ...');
