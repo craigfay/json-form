@@ -49,7 +49,7 @@ function editForm(json) {
     <form onsubmit="handleSubmit(event)" method="POST">
       <input name="key" id="key" placeholder="key"/>
       <p id="key-errors"></p>
-      <textarea name="json" id="json">${json}</textarea>
+      <textarea name="json" id="json"></textarea>
       <p id="json-errors"></p>
       <button>SAVE</button>
     </form>
@@ -58,6 +58,13 @@ function editForm(json) {
       const keyErrors = document.querySelector('#key-errors');
       const jsonField = document.querySelector('#json');
       const jsonErrors = document.querySelector('#json-errors');
+
+      async function fetchSettings() {
+        const response = await fetch('/settings.json');
+        jsonField.value = await response.text();
+      }
+
+      fetchSettings();
 
       keyField.addEventListener('keyup', validateKey);
       jsonField.addEventListener('keyup', validateJson);
